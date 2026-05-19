@@ -2,7 +2,13 @@
 name = "arc"
 version = "0.1.0"
 edition = "2024"
+description = "Turn plain English into Linux shell commands using Groq"
+repository = "https://github.com/Arcnaboo/arc"
+homepage = "https://www.akgur.com"
 license-file = "LICENSE"
+readme = "README.md"
+keywords = ["cli", "linux", "shell", "ai", "groq"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 clap = { version = "4.6.1", features = ["derive"] }
@@ -10,3 +16,17 @@ serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.150"
 tokio = { version = "1.52.3", features = ["full"] }
 reqwest = { version = "0.12", features = ["json", "rustls-tls"] }
+
+[package.metadata.deb]
+maintainer = "Arda Akgür <arda@akgur.com>"
+copyright = "2026, Arda Akgür"
+license-file = ["LICENSE", "0"]
+extended-description = "Arc is a lightweight CLI that turns natural language into Linux shell commands using Groq. It shows the generated command and asks for confirmation before execution."
+depends = "$auto"
+section = "utils"
+priority = "optional"
+assets = [
+    ["target/release/arc", "usr/bin/arc", "755"],
+    ["README.md", "usr/share/doc/arc/README.md", "644"],
+    ["CHANGELOG.md", "usr/share/doc/arc/CHANGELOG.md", "644"]
+]
