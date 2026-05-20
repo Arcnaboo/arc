@@ -1,7 +1,0 @@
-Origin: ArcAI
-Label: ArcAI
-Codename: stable
-Architectures: amd64
-Components: main
-Description: ArcAI APT repository
-SignWith: A27CF405D1492A3FD91F52884121EAF306D29EC0
