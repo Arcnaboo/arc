@@ -1,0 +1,19 @@
+Origin: ArcAI
+Label: ArcAI
+Codename: stable
+Date: Wed, 20 May 2026 01:14:46 UTC
+Architectures: amd64
+Components: main
+Description: ArcAI APT repository
+MD5Sum:
+ 9be906ef38bec7ebc1c3124e36b67ab7 697 main/binary-amd64/Packages
+ b3cb626429a1289314deb9ec8487c484 494 main/binary-amd64/Packages.gz
+ 48d64dfe68ae0bbf72671a9088442235 97 main/binary-amd64/Release
+SHA1:
+ d457a011c8e9628500da4ba7ff2818dfcbe00eb2 697 main/binary-amd64/Packages
+ fb32a14c400a48d5fdcbd6d8beb2b19c7d6a3924 494 main/binary-amd64/Packages.gz
+ e7f4e10c590d54da4d3e24a6df670787219ef90a 97 main/binary-amd64/Release
+SHA256:
+ fd2b7b8b5c065e31daf1c63afe9b7d8b0f5ee7a0eeb750c83ad27c5cff687287 697 main/binary-amd64/Packages
+ 4c71fa1250c71ddbb7a97dbb8ea8841021065d09593b3744538ceddc909c6e65 494 main/binary-amd64/Packages.gz
+ 7771406bc006d8aed363a25911e350ff1d6fe34942d66b30939a7234f86f838a 97 main/binary-amd64/Release
