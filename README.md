@@ -58,6 +58,12 @@ Execute? [y/N]: y
 ### Install
 
 ```bash
+curl -fsSL https://arcnaboo.github.io/arc/install.sh | bash
+```
+
+Or build from source:
+
+```bash
 # Clone the repository
 git clone https://github.com/Arcnaboo/arc.git
 cd arc
