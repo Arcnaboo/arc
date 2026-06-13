@@ -8,8 +8,8 @@ use std::{
     process::{Command, ExitCode},
 };
 
-const CONFIG_DIR: &str = "/usr/arc";
-const KEY_FILE: &str = "/usr/arc/groq.key";
+const CONFIG_DIR: &str = "/usr/arc-ai";
+const KEY_FILE: &str = "/usr/arc-ai/groq.key";
 const GROQ_URL: &str = "https://api.groq.com/openai/v1/chat/completions";
 
 #[derive(Parser)]
