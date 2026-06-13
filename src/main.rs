@@ -13,8 +13,7 @@ const KEY_FILE: &str = "/usr/arc/groq.key";
 const GROQ_URL: &str = "https://api.groq.com/openai/v1/chat/completions";
 
 #[derive(Parser)]
-#[command(name = "arc")]
-#[command(about = "Natural language Linux command runner")]
+#[command(name = "arc", version, about = "Natural language Linux command runner")]
 struct Cli {
     #[command(subcommand)]
     command: Option<Commands>,
