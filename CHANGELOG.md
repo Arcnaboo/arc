@@ -16,7 +16,7 @@ Initial release.
 - Natural language → shell command generation via the [Groq API](https://groq.com/) (`llama-3.3-70b-versatile`)
 - Interactive confirmation prompt before any command runs (`Execute? [y/N]`)
 - `arc-ai set [key]` subcommand to store your Groq API key locally
-- Config directory at `/usr/arc-ai/` with key file at `/usr/arc-ai/groq.key`
+- Config directory at `~/.config/arc-ai/` with key file at `~/.config/arc-ai/groq.key`
 - Restrictive file permissions (`0600`) on the API key file (Unix)
 - Built-in safety filter that blocks known destructive command patterns
 - Strict system prompt: single command output only — no markdown, explanations, or code fences

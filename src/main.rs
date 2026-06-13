@@ -4,12 +4,10 @@ use serde::{Deserialize, Serialize};
 use std::{
     fs,
     io::{self, Write},
-    path::Path,
+    path::PathBuf,
     process::{Command, ExitCode},
 };
 
-const CONFIG_DIR: &str = "/usr/arc-ai";
-const KEY_FILE: &str = "/usr/arc-ai/groq.key";
 const GROQ_URL: &str = "https://api.groq.com/openai/v1/chat/completions";
 
 #[derive(Parser)]
@@ -129,21 +127,41 @@ async fn main() -> ExitCode {
     }
 }
 
+fn config_dir() -> PathBuf {
+    if let Ok(xdg) = std::env::var("XDG_CONFIG_HOME") {
+        if !xdg.is_empty() {
+            return PathBuf::from(xdg).join("arc-ai");
+        }
+    }
+
+    if let Ok(home) = std::env::var("HOME").or_else(|_| std::env::var("USERPROFILE")) {
+        return PathBuf::from(home).join(".config").join("arc-ai");
+    }
+
+    PathBuf::from(".config/arc-ai")
+}
+
+fn key_file() -> PathBuf {
+    config_dir().join("groq.key")
+}
+
 fn save_key(key: &str) -> io::Result<()> {
-    fs::create_dir_all(CONFIG_DIR)?;
-    fs::write(KEY_FILE, key.trim())?;
+    let config_dir = config_dir();
+    let key_file = key_file();
+    fs::create_dir_all(&config_dir)?;
+    fs::write(&key_file, key.trim())?;
 
     #[cfg(unix)]
     {
         use std::os::unix::fs::PermissionsExt;
-        fs::set_permissions(KEY_FILE, fs::Permissions::from_mode(0o600))?;
+        fs::set_permissions(&key_file, fs::Permissions::from_mode(0o600))?;
     }
 
     Ok(())
 }
 
 fn load_key() -> io::Result<String> {
-    let key = fs::read_to_string(Path::new(KEY_FILE))?;
+    let key = fs::read_to_string(key_file())?;
     Ok(key.trim().to_string())
 }
 

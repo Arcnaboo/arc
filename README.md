@@ -42,7 +42,7 @@ Execute? [y/N]: y
 | 🗣 **Natural language in** | Plain English → one shell command, no markdown, no fluff |
 | 🔍 **Preview before run** | See exactly what will execute; cancel anytime |
 | 🛡 **Built-in guardrails** | Blocks known destructive patterns before they reach your shell |
-| 🔑 **Simple setup** | One API key, stored locally at `/usr/arc-ai/groq.key` |
+| 🔑 **Simple setup** | One API key, stored locally at `~/.config/arc-ai/groq.key` |
 | ⚡ **Fast & small** | Single Rust binary — no Python, no Node, no bloat |
 | 🧠 **Llama 3.3 70B** | Powered by Groq's `llama-3.3-70b-versatile` model |
 
@@ -81,7 +81,7 @@ Store your Groq API key once:
 arc-ai set gsk_your_groq_api_key_here
 ```
 
-The key is written to `/usr/arc-ai/groq.key` with `0600` permissions on Unix systems.
+The key is written to `~/.config/arc-ai/groq.key` with `0600` permissions on Unix systems. Do not use `sudo` for `arc-ai set`.
 
 ---
 
@@ -154,8 +154,8 @@ Arc is designed to be helpful, not reckless.
 
 | Path | Purpose |
 |---|---|
-| `/usr/arc-ai/` | Config directory (created on first `arc-ai set`) |
-| `/usr/arc-ai/groq.key` | Your Groq API key |
+| `~/.config/arc-ai/` | Config directory (created on first `arc-ai set`) |
+| `~/.config/arc-ai/groq.key` | Your Groq API key |
 
 ---
 
