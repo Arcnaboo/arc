@@ -10,10 +10,11 @@ Turn plain English into shell commands — review them, approve them, execute th
 
 [![Rust](https://img.shields.io/badge/rust-2024%20edition-orange?style=for-the-badge&logo=rust&logoColor=white)](https://www.rust-lang.org/)
 [![Groq](https://img.shields.io/badge/powered%20by-Groq-00D4AA?style=for-the-badge)](https://groq.com/)
+[![License](https://img.shields.io/badge/license-ARC%201.1-purple?style=for-the-badge)](LICENSE)
 
 <br />
 
-[Quick start](#-quick-start) · [Usage](#-usage) · [How it works](#-how-it-works) · [Safety](#-safety) · [Build from source](#-build-from-source) · [Changelog](CHANGELOG.md)
+[Quick start](#-quick-start) · [Usage](#-usage) · [How it works](#-how-it-works) · [Safety](#-safety) · [Build from source](#-build-from-source) · [Changelog](CHANGELOG.md) · [License](LICENSE)
 
 </div>
 
@@ -186,6 +187,7 @@ arc/
 ├── Cargo.toml       # Package manifest
 ├── Cargo.lock       # Locked dependencies
 ├── CHANGELOG.md     # Version history
+├── LICENSE          # ARC License (Version 1.1)
 ├── src/
 │   └── main.rs      # CLI, API client, safety checks
 └── README.md
@@ -201,6 +203,6 @@ arc/
 
 <br />
 
-Made with Rust · Powered by [Groq](https://groq.com/)
+Made with Rust · Powered by [Groq](https://groq.com/) · [ARC License 1.1](LICENSE)
 
 </div>

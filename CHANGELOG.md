@@ -21,6 +21,7 @@ Initial release.
 - Built-in safety filter that blocks known destructive command patterns
 - Strict system prompt: single command output only — no markdown, explanations, or code fences
 - Single static Rust binary built with `clap`, `tokio`, and `reqwest`
+- Released under the [ARC License (Version 1.1)](LICENSE)
 
 ### Notes
 
