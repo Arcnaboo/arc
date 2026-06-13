@@ -13,7 +13,7 @@ Turn plain English into shell commands — review them, approve them, execute th
 
 <br />
 
-[Quick start](#-quick-start) · [Usage](#-usage) · [How it works](#-how-it-works) · [Safety](#-safety) · [Build from source](#-build-from-source)
+[Quick start](#-quick-start) · [Usage](#-usage) · [How it works](#-how-it-works) · [Safety](#-safety) · [Build from source](#-build-from-source) · [Changelog](CHANGELOG.md)
 
 </div>
 
@@ -185,6 +185,7 @@ The binary lands at `target/release/arc`.
 arc/
 ├── Cargo.toml       # Package manifest
 ├── Cargo.lock       # Locked dependencies
+├── CHANGELOG.md     # Version history
 ├── src/
 │   └── main.rs      # CLI, API client, safety checks
 └── README.md
