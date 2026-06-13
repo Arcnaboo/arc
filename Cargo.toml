@@ -10,6 +10,10 @@ readme = "README.md"
 keywords = ["cli", "linux", "shell", "ai", "groq"]
 categories = ["command-line-utilities"]
 
+[[bin]]
+name = "arc-ai"
+path = "src/main.rs"
+
 [dependencies]
 clap = { version = "4.6.1", features = ["derive"] }
 serde = { version = "1.0.228", features = ["derive"] }
@@ -26,7 +30,7 @@ depends = "$auto"
 section = "utils"
 priority = "optional"
 assets = [
-    ["target/release/arc", "usr/bin/arc", "755"],
+    ["target/release/arc-ai", "usr/bin/arc-ai", "755"],
     ["README.md", "usr/share/doc/arc/README.md", "644"],
     ["CHANGELOG.md", "usr/share/doc/arc/CHANGELOG.md", "644"]
 ]

@@ -13,7 +13,7 @@ const KEY_FILE: &str = "/usr/arc/groq.key";
 const GROQ_URL: &str = "https://api.groq.com/openai/v1/chat/completions";
 
 #[derive(Parser)]
-#[command(name = "arc", version, about = "Natural language Linux command runner")]
+#[command(name = "arc-ai", version, about = "Natural language Linux command runner")]
 struct Cli {
     #[command(subcommand)]
     command: Option<Commands>,
@@ -71,8 +71,8 @@ async fn main() -> ExitCode {
 
         None => {
             let Some(text) = cli.text else {
-                eprintln!("usage: arc \"command text\"");
-                eprintln!("       arc set [Your-groq-key]");
+                eprintln!("usage: arc-ai \"command text\"");
+                eprintln!("       arc-ai set [Your-groq-key]");
                 return ExitCode::FAILURE;
             };
 
@@ -80,7 +80,7 @@ async fn main() -> ExitCode {
                 Ok(k) => k,
                 Err(_) => {
                     eprintln!("ERROR: Groq API key not configured.");
-                    eprintln!("Run: arc set [Your-groq-key]");
+                    eprintln!("Run: arc-ai set [Your-groq-key]");
                     return ExitCode::FAILURE;
                 }
             };

@@ -27,7 +27,7 @@ Turn plain English into shell commands — review them, approve them, execute th
 Nothing runs until you say so. Every generated command is shown first, then you confirm with `y` before execution.
 
 ```
-$ arc "list all docker containers sorted by memory usage"
+$ arc-ai "list all docker containers sorted by memory usage"
 Generated command:
 docker stats --no-stream --format "table {{.Name}}\t{{.MemUsage}}" | sort -k2 -h
 Execute? [y/N]: y
@@ -70,7 +70,7 @@ Or build a release binary directly:
 
 ```bash
 cargo build --release
-sudo cp target/release/arc /usr/local/bin/
+sudo cp target/release/arc-ai /usr/local/bin/
 ```
 
 ### Configure
@@ -78,7 +78,7 @@ sudo cp target/release/arc /usr/local/bin/
 Store your Groq API key once:
 
 ```bash
-arc set gsk_your_groq_api_key_here
+arc-ai set gsk_your_groq_api_key_here
 ```
 
 The key is written to `/usr/arc/groq.key` with `0600` permissions on Unix systems.
@@ -89,19 +89,19 @@ The key is written to `/usr/arc/groq.key` with `0600` permissions on Unix system
 
 ```bash
 # Run a natural language command
-arc "show disk usage of current directory"
+arc-ai "show disk usage of current directory"
 
 # Save or update your API key
-arc set [Your-groq-key]
+arc-ai set [Your-groq-key]
 ```
 
 ### Examples
 
 ```bash
-arc "find files larger than 100MB modified in the last 7 days"
-arc "show my public IP address"
-arc "count lines of code in all Rust files"
-arc "list processes using the most CPU"
+arc-ai "find files larger than 100MB modified in the last 7 days"
+arc-ai "show my public IP address"
+arc-ai "count lines of code in all Rust files"
+arc-ai "list processes using the most CPU"
 ```
 
 Each invocation follows the same flow:
@@ -154,7 +154,7 @@ Arc is designed to be helpful, not reckless.
 
 | Path | Purpose |
 |---|---|
-| `/usr/arc/` | Config directory (created on first `arc set`) |
+| `/usr/arc/` | Config directory (created on first `arc-ai set`) |
 | `/usr/arc/groq.key` | Your Groq API key |
 
 ---
@@ -167,7 +167,7 @@ cd arc
 cargo build --release
 ```
 
-The binary lands at `target/release/arc`.
+The binary lands at `target/release/arc-ai`.
 
 ### Dependencies
 
